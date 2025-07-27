@@ -6,10 +6,25 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
   <body>
-    <header><h1>{{ site.title }}</h1></header>
+    <header>
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/about-me/' | relative_url }}">About Me</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/interests/' | relative_url }}">Interests</a></li>
+        <li><a href="{{ '/photo-gallery/' | relative_url }}">Photo Gallery</a></li>
+      </ul>
+    </nav>
+
     <main>
       {{ content }}
     </main>
+
     <footer><p>&copy; {{ site.author }}</p></footer>
   </body>
 </html>
+
