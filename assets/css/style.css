@@ -7,6 +7,10 @@ body {
   background-color: #E6E6FA; /* light lavender */
 }
 
+strong, b {
+  font-weight: 600;  /* or 700 for even bolder */
+}
+
 .container {
   max-width: 800px;
   margin: auto;

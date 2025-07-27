@@ -8,6 +8,6 @@ permalink: /interests/
 
 Interest Intro
 
-**Interest Example**
+**Interest Example**<br>
 - Interest Example Description
 
