@@ -6,9 +6,8 @@ permalink: /interests/
 
 ## Interests
 
-Some things I love exploring:
+Interest Intro
 
-- **Web Development**
-- Digital Art
-- AI & Machine Learning
-- Hiking and Photography
+**Interest Example**
+- Interest Example Description
+
