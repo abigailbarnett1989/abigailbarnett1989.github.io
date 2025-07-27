@@ -8,7 +8,7 @@ permalink: /interests/
 
 Some things I love exploring:
 
-- Web Development
+- **Web Development**
 - Digital Art
 - AI & Machine Learning
 - Hiking and Photography
