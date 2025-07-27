@@ -4,13 +4,15 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: linear-gradient(135deg, #f5f3ff 0%, #e9d5ff 50%, #ddd6fe 100%);
+  background: linear-gradient(135deg, #fdfcff 0%, #f8f5ff 50%, #f3f0ff 100%);
   min-height: 100vh;
   letter-spacing: 0.3px;
+  color: #2d3748;
 }
 
 strong, b {
   font-weight: 600;
+  color: #1a202c;
 }
 
 .container {
@@ -19,96 +21,32 @@ strong, b {
   padding: 0;
 }
 
-/* Full width nav bar */
-nav {
-  background: rgba(139, 92, 246, 0.9);
-  backdrop-filter: blur(10px);
-  padding: 0.5em;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid rgba(196, 181, 253, 0.3);
-}
-
-/* Center and constrain nav items */
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1200px;
-  justify-content: center;
-}
-
-/* Nav link spacing and styling */
-nav li {
-  margin: 0 1.5em;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  color: #c4b5fd;
-  text-decoration: none;
-}
-
-/* Center the header title */
-header {
-  text-align: center;
-  margin: 2em 0 1em 0;
-  padding: 0 1em;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  font-weight: 300;
-  color: #374151;
-  background: linear-gradient(45deg, #8b5cf6, #c4b5fd);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.5px;
-}
-
 footer {
   text-align: center;
   margin-top: 3em;
   padding: 2em 1em;
   font-size: 0.9em;
-  color: #6b7280;
+  color: #718096;
   font-weight: 400;
 }
 
 /* Homepage specific styles */
 .homepage-content {
-  padding: 2em 1em;
+  padding: 3em 1em;
 }
 
 .main-title {
   text-align: center;
-  color: #374151;
+  color: #2d3748;
   font-size: 3rem;
   font-weight: 300;
   margin-bottom: 15px;
   letter-spacing: -0.5px;
-  background: linear-gradient(45deg, #8b5cf6, #c4b5fd);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .main-subtitle {
   text-align: center;
-  color: #6b7280;
+  color: #4a5568;
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 50px;
@@ -125,20 +63,20 @@ footer {
 
 .section-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(196, 181, 253, 0.3);
+  border: 1px solid rgba(237, 233, 254, 0.6);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
 }
 
 .section-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.25);
-  border-color: rgba(196, 181, 253, 0.5);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.15);
+  border-color: rgba(196, 181, 253, 0.4);
 }
 
 .section-image {
@@ -156,7 +94,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(139, 92, 246, 0.85), rgba(196, 181, 253, 0.85));
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.75), rgba(196, 181, 253, 0.75));
   opacity: 0;
   transition: all 0.3s ease;
   display: flex;
@@ -216,17 +154,13 @@ footer {
 .section-title {
   font-size: 20px;
   font-weight: 600;
-  color: #374151;
+  color: #2d3748;
   margin-bottom: 12px;
-  background: linear-gradient(45deg, #8b5cf6, #c4b5fd);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   letter-spacing: 0.3px;
 }
 
 .section-brief {
-  color: #6b7280;
+  color: #4a5568;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.6;
@@ -240,64 +174,101 @@ footer {
 }
 
 .skill-tag {
-  background: linear-gradient(45deg, #8b5cf6, #c4b5fd);
+  background: linear-gradient(45deg, #a78bfa, #c4b5fd);
   color: white;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.3px;
-  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
 }
 
-/* Professional background images using patterns and gradients */
+/* Image backgrounds - replace these with your actual images */
 .about-bg {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(196, 181, 253, 0.1)),
-              radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(196, 181, 253, 0.15) 0%, transparent 50%),
-              linear-gradient(45deg, #f8fafc 25%, transparent 25%),
-              linear-gradient(-45deg, #f8fafc 25%, transparent 25%);
-  background-size: cover, cover, cover, 60px 60px, 60px 60px;
-  background-position: 0 0, 0 0, 0 0, 0 0, 30px 30px;
+  background-image: url('{{ "/assets/images/about-me.jpg" | relative_url }}');
+  background-size: cover;
+  background-position: center;
 }
 
 .computational-bg {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(196, 181, 253, 0.1)),
-              repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(139, 92, 246, 0.05) 20px, rgba(139, 92, 246, 0.05) 40px),
-              conic-gradient(from 45deg at 25% 75%, rgba(196, 181, 253, 0.1) 0deg, transparent 90deg);
+  background-image: url('{{ "/assets/images/computational-projects.jpg" | relative_url }}');
+  background-size: cover;
+  background-position: center;
 }
 
 .laboratory-bg {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(196, 181, 253, 0.1)),
-              radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.08) 2px, transparent 2px),
-              linear-gradient(90deg, rgba(196, 181, 253, 0.05) 50%, transparent 50%);
-  background-size: cover, 30px 30px, 40px 40px;
+  background-image: url('{{ "/assets/images/laboratory-projects.jpg" | relative_url }}');
+  background-size: cover;
+  background-position: center;
 }
 
 .interests-bg {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(196, 181, 253, 0.1)),
-              repeating-conic-gradient(from 0deg at 50% 50%, rgba(139, 92, 246, 0.05) 0deg 15deg, transparent 15deg 30deg),
-              radial-gradient(ellipse at top left, rgba(196, 181, 253, 0.1) 0%, transparent 50%);
+  background-image: url('{{ "/assets/images/interests.jpg" | relative_url }}');
+  background-size: cover;
+  background-position: center;
 }
 
-/* Regular page content styling */
+/* Fallback patterns if images don't load */
+.about-bg:not([style*="background-image"]) {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%),
+              radial-gradient(circle at 30% 30%, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
+}
+
+.computational-bg:not([style*="background-image"]) {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%),
+              repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(167, 139, 250, 0.05) 20px, rgba(167, 139, 250, 0.05) 40px);
+}
+
+.laboratory-bg:not([style*="background-image"]) {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%),
+              radial-gradient(circle at 50% 50%, rgba(167, 139, 250, 0.08) 2px, transparent 2px);
+  background-size: cover, 30px 30px;
+}
+
+.interests-bg:not([style*="background-image"]) {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%),
+              repeating-conic-gradient(from 0deg at 50% 50%, rgba(167, 139, 250, 0.05) 0deg 15deg, transparent 15deg 30deg);
+}
+
+/* Regular page content styling for other pages */
+main h1, main h2, main h3 {
+  color: #2d3748;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(167, 139, 250, 0.2);
+}
+
+main p {
+  color: #4a5568;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+  margin: 1.5rem 0;
+}
+
+/* Content pages styling */
 main {
   padding: 2em 1em;
   max-width: 800px;
   margin: 0 auto;
-}
-
-main h1, main h2, main h3 {
-  color: #374151;
-  background: linear-gradient(45deg, #8b5cf6, #c4b5fd);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-main p {
-  color: #4b5563;
-  font-weight: 400;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -314,12 +285,7 @@ main p {
     padding: 25px 20px;
   }
   
-  nav ul {
-    flex-wrap: wrap;
-    gap: 0.5em;
-  }
-  
-  nav li {
-    margin: 0.25em;
+  .homepage-content {
+    padding: 2em 1em;
   }
 }
