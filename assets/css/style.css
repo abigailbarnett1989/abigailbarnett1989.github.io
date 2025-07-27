@@ -1,11 +1,11 @@
 body {
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;   /* Light weight for thin, elegant text */
-  margin: 0;          /* remove default margin */
+  font-weight: 300;   
+  margin: 0;          
   padding: 1em;
   line-height: 1.6;
   background-color: #E6E6FA;
-  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-behavior: smooth; 
 }
 
 /* Container to center and limit width */
@@ -22,7 +22,7 @@ nav {
   background-color: #333;
   padding: 0.5em;
   width: 100%;
-  position: sticky; /* Sticky nav */
+  position: sticky; 
   top: 0;
   z-index: 100;
 }
@@ -45,15 +45,15 @@ nav li {
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 600; /* slightly bolder for nav links */
-  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover */
+  font-weight: 600; 
+  transition: color 0.3s ease, text-decoration 0.3s ease; 
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Center the header title */
+
 header {
   text-align: center;
   margin-bottom: 1em;
@@ -65,13 +65,13 @@ header h1 {
   font-weight: 300;
 }
 
-/* Custom scrollbar for WebKit browsers */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #A9A9F5; /* soft lavender shade */
+  background-color: #A9A9F5; 
   border-radius: 4px;
 }
 
@@ -94,7 +94,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  color: #A9A9F5; /* lavender highlight on hover */
+  color: #A9A9F5; 
 }
 
 /* Back to Top button */
@@ -109,7 +109,7 @@ footer .social-links a:hover {
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
-  display: none; /* Hidden initially */
+  display: none; 
   z-index: 200;
   transition: background-color 0.3s ease;
 }
@@ -134,8 +134,8 @@ footer .social-links a:hover {
 
 /* Spinner animation */
 .spinner {
-  border: 6px solid #f3f3f3; /* Light grey */
-  border-top: 6px solid #333; /* Darker lavender/gray */
+  border: 6px solid #f3f3f3; 
+  border-top: 6px solid #333; 
   border-radius: 50%;
   width: 40px;
   height: 40px;
