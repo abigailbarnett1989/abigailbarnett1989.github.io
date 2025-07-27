@@ -1,10 +1,10 @@
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: linear-gradient(135deg, #faf8ff 0%, #f3f0ff 30%, #ede8ff 100%);
+  background: #faf8ff;
   min-height: 100vh;
   letter-spacing: 0.3px;
   color: #2d3748;
@@ -18,10 +18,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(160, 145, 210, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(160, 145, 210, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 40% 60%, rgba(160, 145, 210, 0.02) 0%, transparent 50%);
+  background: none;
   pointer-events: none;
   z-index: -1;
 }
@@ -57,11 +54,9 @@ footer {
   font-weight: 300;
   margin: 0 0 15px 0;
   letter-spacing: -1px;
-  background: linear-gradient(135deg, #5b4b8a, #9f8fd4, #c9c2e5);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(91, 75, 138, 0.1);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  text-shadow: none;
 }
 
 .main-subtitle {
@@ -84,42 +79,24 @@ footer {
 
 .section-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(160, 145, 210, 0.2);
+  background: #fff;
+  backdrop-filter: none;
+  border: 1px solid #d1d1e9;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 
-    0 4px 20px rgba(91, 75, 138, 0.08),
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease;
   cursor: pointer;
-  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-card:hover {
-  transform: translateY(-12px) scale(1.02) rotateX(2deg);
-  box-shadow: 
-    0 25px 60px rgba(95, 80, 150, 0.12),
-    0 0 0 1px rgba(160, 145, 210, 0.3) inset,
-    0 0 40px rgba(160, 145, 210, 0.08);
-  border-color: rgba(160, 145, 210, 0.4);
+  transform: translateY(-6px);
+  border-color: #a091d2;
 }
 
 .section-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(160, 145, 210, 0.6), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.section-card:hover::before {
-  opacity: 1;
+  display: none;
 }
 
 .section-image {
@@ -127,103 +104,37 @@ footer {
   height: 240px;
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
 }
 
 .section-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(91, 75, 138, 0.85) 0%, rgba(120, 95, 180, 0.75) 50%, rgba(160, 145, 210, 0.65) 100%);
-  opacity: 0;
-  transition: all 0.4s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 30px;
-}
-
-.section-card:hover .section-overlay {
-  opacity: 1;
-}
-
-.overlay-text {
-  color: white;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  transform: translateY(20px);
-  transition: transform 0.3s ease 0.1s;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.section-card:hover .overlay-text {
-  transform: translateY(0);
-}
-
-.overlay-button {
-  padding: 12px 28px;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  color: white;
-  text-decoration: none;
-  border-radius: 35px;
-  font-weight: 500;
-  transition: all 0.4s ease;
-  font-size: 14px;
-  letter-spacing: 0.6px;
-  transform: translateY(20px);
-  display: inline-block;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.section-card:hover .overlay-button {
-  transform: translateY(0);
-}
-
-.overlay-button:hover {
-  background: rgba(255, 255, 255, 0.95);
-  color: #5b4b8a;
-  border-color: rgba(255, 255, 255, 1);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  display: none;
 }
 
 .section-content {
-  padding: 35px 30px;
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .section-title {
   font-size: 22px;
   font-weight: 600;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #5b4b8a, #9f8fd4, #c9c2e5);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  -webkit-text-fill-color: currentColor;
   letter-spacing: 0.3px;
   text-align: center;
   position: relative;
+  text-shadow: none;
 }
 
 .section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(160, 145, 210, 0.4), transparent);
-  border-radius: 1px;
+  display: none;
 }
 
 .section-brief {
@@ -243,28 +154,21 @@ footer {
 }
 
 .skill-tag {
-  background: linear-gradient(135deg, #b1a7d6 0%, #c9c2e5 100%);
+  background: #e5e3f0;
   color: #4c1d95;
   padding: 8px 16px;
   border-radius: 25px;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.4px;
-  box-shadow: 
-    0 2px 8px rgba(91, 75, 138, 0.12),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  border: 1px solid #c9c2e5;
   transition: all 0.3s ease;
-  border: 1px solid rgba(160, 145, 210, 0.3);
 }
 
 .skill-tag:hover {
   transform: translateY(-1px);
-  box-shadow: 
-    0 4px 12px rgba(91, 75, 138, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
 }
 
-/* Image backgrounds - replace these with your actual images */
 .about-bg {
   background-image: url('{{ "/assets/images/about-me.jpg" | relative_url }}');
   background-size: cover;
@@ -289,7 +193,6 @@ footer {
   background-position: center;
 }
 
-/* Regular page content styling for other pages */
 main h1, main h2, main h3 {
   color: #2d3748;
 }
@@ -299,11 +202,9 @@ main h1 {
   font-weight: 300;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(167, 139, 250, 0.2);
-  background: linear-gradient(135deg, #6b46c1, #8b5cf6);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid #e0ddee;
+  background: none;
+  -webkit-text-fill-color: currentColor;
 }
 
 main p {
@@ -320,7 +221,6 @@ main img {
   margin: 1.5rem 0;
 }
 
-/* Content pages styling */
 main {
   padding: 2em 1em;
   max-width: 800px;
@@ -336,16 +236,16 @@ main {
   .main-title {
     font-size: 2.8rem;
   }
-  
+
   .portfolio-container {
     grid-template-columns: 1fr;
     gap: 25px;
   }
-  
+
   .section-content {
     padding: 30px 25px;
   }
-  
+
   .homepage-content {
     padding: 15px 1em 2em 1em;
   }
