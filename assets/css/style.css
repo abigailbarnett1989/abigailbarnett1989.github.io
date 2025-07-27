@@ -158,9 +158,9 @@ footer {
   transform: translateY(0);
 }
 
-/* Updated: Keep the same colors but add upward movement */
+/* Updated: White background with upward movement */
 .overlay-button:hover {
-  background-color: #f4f1fb;
+  background-color: #ffffff;
   color: #4c1d95;
   border-color: #4c1d95;
   transform: translateY(-3px);
