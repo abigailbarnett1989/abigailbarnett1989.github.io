@@ -1,28 +1,24 @@
 body {
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;   
-  margin: 0;          
+  font-weight: 300;
+  margin: 0;
   padding: 1em;
   line-height: 1.6;
-  background-color: #E6E6FA;
-  scroll-behavior: smooth; 
+  background-color: #E6E6FA; /* light lavender */
 }
 
-/* Container to center and limit width */
 .container {
   max-width: 800px;
   margin: auto;
-  background-color: white;
   padding: 1em;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-/* Full width nav */
+/* Full width nav bar */
 nav {
   background-color: #333;
   padding: 0.5em;
   width: 100%;
-  position: sticky; 
+  position: sticky;
   top: 0;
   z-index: 100;
 }
@@ -30,30 +26,29 @@ nav {
 /* Center and constrain nav items */
 nav ul {
   display: flex;
-  justify-content: center; 
   list-style: none;
   margin: 0 auto;
   padding: 0;
   max-width: 800px;
+  justify-content: center; /* Center nav items */
 }
 
-/* Spacing between nav links */
+/* Nav link spacing and styling */
 nav li {
-  margin-right: 1.5em;
+  margin: 0 1em;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 600; 
-  transition: color 0.3s ease, text-decoration 0.3s ease; 
+  font-weight: 600;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-
+/* Center the header title */
 header {
   text-align: center;
   margin-bottom: 1em;
@@ -65,84 +60,9 @@ header h1 {
   font-weight: 300;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #A9A9F5; 
-  border-radius: 4px;
-}
-
-/* Footer social links container */
 footer {
   text-align: center;
   margin-top: 2em;
-}
-
-footer .social-links {
-  margin-top: 0.5em;
-}
-
-footer .social-links a {
-  margin: 0 0.5em;
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-footer .social-links a:hover {
-  color: #A9A9F5; 
-}
-
-/* Back to Top button */
-#back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-  display: none; 
-  z-index: 200;
-  transition: background-color 0.3s ease;
-}
-
-#back-to-top:hover {
-  background-color: #A9A9F5;
-}
-
-/* Loading Spinner overlay */
-#loading-spinner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-/* Spinner animation */
-.spinner {
-  border: 6px solid #f3f3f3; 
-  border-top: 6px solid #333; 
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  font-size: 0.9em;
+  color: #555;
 }
