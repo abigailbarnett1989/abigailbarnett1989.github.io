@@ -93,6 +93,11 @@ footer {
   opacity: 1;
 }
 
+/* Updated: Remove the upward movement from the entire card */
+.section-card:hover .overlay-button {
+  transform: translateY(-3px);
+}
+
 .section-image {
   width: 100%;
   height: 240px;
@@ -149,12 +154,17 @@ footer {
   font-size: 14px;
   letter-spacing: 0.6px;
   display: inline-block;
+  /* Updated: Set initial transform state */
+  transform: translateY(0);
 }
 
+/* Updated: Keep the same colors but add upward movement */
 .overlay-button:hover {
-  background-color: #e6dfff;
-  color: #2d1e6f;
-  border-color: #2d1e6f;
+  background-color: #f4f1fb;
+  color: #4c1d95;
+  border-color: #4c1d95;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(76, 29, 149, 0.2);
 }
 
 .section-title {
