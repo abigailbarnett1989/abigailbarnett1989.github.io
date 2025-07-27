@@ -4,6 +4,8 @@ title: Interests
 permalink: /interests/
 ---
 
+## Interests
+
 Some things I love exploring:
 
 - Web Development
