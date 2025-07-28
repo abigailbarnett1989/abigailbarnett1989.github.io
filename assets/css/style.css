@@ -217,29 +217,28 @@ footer {
 }
 
 .about-bg {
-  background-image: url('{{ "/assets/images/about-me.jpg" | relative_url }}');
+  background-image: url('/assets/images/about-me.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .computational-bg {
-  background-image: url('{{ "/assets/images/computational-projects.jpg" | relative_url }}');
+  background-image: url('/assets/images/computational-projects.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .laboratory-bg {
-  background-image: url('{{ "/assets/images/laboratory-projects.jpg" | relative_url }}');
+  background-image: url('/assets/images/laboratory-projects.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .interests-bg {
-  background-image: url('{{ "/assets/images/interests.jpg" | relative_url }}');
+  background-image: url('/assets/images/interests.jpg');
   background-size: cover;
   background-position: center;
 }
-
 main h1, main h2, main h3 {
   color: #2d3748;
 }
