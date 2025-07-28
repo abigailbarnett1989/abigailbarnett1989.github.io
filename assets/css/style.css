@@ -1,3 +1,4 @@
+/* === CSS === */
 body {
   font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 300;
@@ -93,11 +94,6 @@ footer {
   opacity: 1;
 }
 
-/* Updated: Remove the upward movement from the entire card */
-.section-card:hover .overlay-button {
-  transform: translateY(-3px);
-}
-
 .section-image {
   width: 100%;
   height: 240px;
@@ -122,7 +118,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e6e0f8; /* muted lavender */
+  background-color: #e6e0f8;
   opacity: 0;
   transition: opacity 0.3s ease;
   display: flex;
@@ -154,11 +150,9 @@ footer {
   font-size: 14px;
   letter-spacing: 0.6px;
   display: inline-block;
-  /* Updated: Set initial transform state */
   transform: translateY(0);
 }
 
-/* Updated: White background with upward movement */
 .overlay-button:hover {
   background-color: #ffffff;
   color: #4c1d95;
@@ -218,27 +212,17 @@ footer {
 
 .about-bg {
   background-image: url('/assets/images/about-me.jpg');
-  background-size: cover;
-  background-position: center;
 }
-
 .computational-bg {
   background-image: url('/assets/images/computational-projects.jpg');
-  background-size: cover;
-  background-position: center;
 }
-
 .laboratory-bg {
   background-image: url('/assets/images/laboratory-projects.jpg');
-  background-size: cover;
-  background-position: center;
 }
-
 .interests-bg {
   background-image: url('/assets/images/interests.jpg');
-  background-size: cover;
-  background-position: center;
 }
+
 main h1, main h2, main h3 {
   color: #2d3748;
 }
@@ -282,16 +266,13 @@ main {
   .main-title {
     font-size: 2.8rem;
   }
-
   .portfolio-container {
     grid-template-columns: 1fr;
     gap: 25px;
   }
-
   .section-content {
     padding: 30px 25px;
   }
-
   .homepage-content {
     padding: 15px 1em 2em 1em;
   }
