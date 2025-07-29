@@ -88,6 +88,7 @@ footer {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  height: 420px; /* Fixed height to maintain consistent proportions */
 }
 
 .section-card:hover .section-overlay {
@@ -96,20 +97,21 @@ footer {
 
 .section-image {
   width: 100%;
-  height: 240px;
+  height: 280px; /* Increased from 240px to achieve ~2/3 ratio */
   background-size: cover;
   background-position: center;
 }
 
 .section-content {
-  padding: 30px;
+  padding: 20px 30px; /* Reduced vertical padding from 30px to 20px */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Changed to space-between for equal spacing */
   align-items: center;
   text-align: center;
   position: relative;
+  height: 140px; /* Fixed height for content area (420px - 280px = 140px) */
 }
 
 .section-overlay {
@@ -165,7 +167,7 @@ footer {
   font-size: 22px;
   font-weight: 600;
   color: #000;
-  margin-bottom: 16px;
+  margin: 0; /* Removed margin to let flex spacing handle it */
   background: none;
   -webkit-text-fill-color: currentColor;
   letter-spacing: 0.3px;
@@ -192,6 +194,7 @@ footer {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  margin: 0; /* Removed margin to let flex spacing handle it */
 }
 
 .skill-tag {
@@ -270,8 +273,15 @@ main {
     grid-template-columns: 1fr;
     gap: 25px;
   }
+  .section-card {
+    height: 380px; /* Slightly smaller on mobile */
+  }
+  .section-image {
+    height: 250px; /* Proportionally smaller on mobile */
+  }
   .section-content {
-    padding: 30px 25px;
+    padding: 15px 25px;
+    height: 130px; /* Adjusted for mobile */
   }
   .homepage-content {
     padding: 15px 1em 2em 1em;
