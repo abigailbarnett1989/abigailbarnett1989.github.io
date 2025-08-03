@@ -98,8 +98,8 @@ footer {
 .section-image {
   width: 100%;
   height: 280px; /* Increased from 240px to achieve ~2/3 ratio */
-  background-size: cover;
-  background-position: center;
+  background-size: 100% auto; /* Changed from cover to full width */
+  background-repeat: no-repeat; /* Added to prevent image repetition */
 }
 
 .section-content {
@@ -215,15 +215,19 @@ footer {
 
 .about-bg {
   background-image: url('/assets/images/about-me.jpg');
+  background-position: 50% 12%; /* Custom Y position at 12% */
 }
 .computational-bg {
   background-image: url('/assets/images/computational-projects.jpg');
+  background-position: center; /* Keeping center as you didn't specify a change */
 }
 .laboratory-bg {
   background-image: url('/assets/images/laboratory-projects.jpg');
+  background-position: 50% 23%; /* Custom Y position at 23% */
 }
 .interests-bg {
   background-image: url('/assets/images/interests.jpg');
+  background-position: 50% 18%; /* Custom Y position at 18% */
 }
 
 main h1, main h2, main h3 {
