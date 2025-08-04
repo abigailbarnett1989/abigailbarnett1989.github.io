@@ -6,12 +6,13 @@ title: Home
 <div class="homepage-content">
   <!-- Animated Name Title -->
   <h1 class="main-title">
-  <span class="typing-static">Abigail Barnett</span>
-</h1>
+    <span class="typing-static">Abigail Barnett</span>
+  </h1>
 
-<p class="main-subtitle">
-  <span class="typing-static subtitle-wrapper">Imperial College London BSc Chemistry with Management</span>
-</p>
+  <p class="main-subtitle">
+    <span class="typing-static subtitle-wrapper">Imperial College London BSc Chemistry with Management</span>
+  </p>
+
   <div class="portfolio-container">
 
     <!-- About Me Section -->
@@ -113,29 +114,87 @@ document.addEventListener("DOMContentLoaded", function () {
   const sectionCards = document.querySelectorAll(".section-card");
   const portfolioContainer = document.querySelector(".portfolio-container");
 
-  // Reset widths
   title.style.width = "0";
   subtitle.style.width = "0";
-
-  // Step 1: Animate title
+  
+  // Title animates first
   title.style.animation = "typewriter-no-blink 3s steps(40, end) forwards";
 
-  // Step 2: Animate subtitle after title finishes
+  // Subtitle after title completes
   setTimeout(() => {
     subtitle.style.animation = "typewriter-no-blink 3s steps(60, end) forwards";
-  }, 3200);
+  }, 3000);
 
-  // Step 3: Show container and animate each section
+  // Sections come in after subtitle completes
   setTimeout(() => {
-    portfolioContainer.classList.add("show"); // fade in container
+    portfolioContainer.classList.add("show");
     sectionCards.forEach((card, index) => {
       setTimeout(() => {
         card.classList.add("animate-in");
       }, index * 200);
     });
-  }, 6800); // after title and subtitle animations
+  }, 6200);
 });
 </script>
 
+<style>
+body {
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background: #faf8ff;
+  line-height: 1.6;
+  min-height: 100vh;
+  letter-spacing: 0.3px;
+  color: #2d3748;
+}
 
+.homepage-content {
+  padding: 40px 1em 3em 1em;
+}
 
+.main-title {
+  text-align: center;
+  color: #2d3748;
+  font-size: 3.8rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0.1em;
+  letter-spacing: -1px;
+}
+
+.main-subtitle {
+  text-align: center;
+  color: #4a5568;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.2em;
+  margin-bottom: 30px;
+  padding-top: 0;
+  border-top: none;
+  opacity: 0.9;
+}
+
+.typing-static, .subtitle-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  display: inline-block;
+}
+
+.typing-static {
+  animation: none;
+}
+
+.subtitle-wrapper {
+  animation: none;
+}
+
+@keyframes typewriter-no-blink {
+  from { width: 0; }
+  to { width: 100%; }
+}
+</style>
+</body>
+</html>
