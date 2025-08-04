@@ -5,11 +5,13 @@ title: Home
 
 <div class="homepage-content">
   <!-- Animated Name Title -->
-  <h1 class="main-title typing" id="main-title">Abigail Barnett</h1>
+  <h1 class="main-title">
+  <span class="typing-static">Abigail Barnett</span>
+</h1>
 
-  <!-- Subtitle that fades in -->
-  <p class="main-subtitle" id="main-subtitle">Imperial College London BSc Chemistry with Management</p>
-
+<p class="main-subtitle">
+  <span class="typing-static subtitle-wrapper">Imperial College London BSc Chemistry with Management</span>
+</p>
   <div class="portfolio-container">
 
     <!-- About Me Section -->
@@ -105,25 +107,11 @@ title: Home
 
 <!-- Animation Script -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const title = document.getElementById("main-title");
-    const subtitle = document.getElementById("main-subtitle");
-    const cards = document.querySelectorAll(".section-card");
+document.addEventListener("DOMContentLoaded", function () {
+  const subtitle = document.getElementById("main-subtitle");
 
-    // Start typewriter animation
-    title.classList.add("typing");
-
-    setTimeout(() => {
-      title.classList.add("typing-done");
-      subtitle.style.animationDelay = "0s";
-      subtitle.classList.add("fade-in");
-
-      cards.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add("visible");
-        }, index * 300);
-      });
-
-    }, 2100);
-  });
+  // Animate subtitle after title has finished typing
+  subtitle.style.animationDelay = "2.1s";
+});
 </script>
+

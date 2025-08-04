@@ -292,51 +292,40 @@ main {
   }
 }
 
-/* === Animations for initial entrance === */
+/* === Refined Typing Animation === */
 
-/* Typewriter animation for main title */
-@keyframes typewriter {
+/* Basic line that always appears under title */
+.main-subtitle {
+  position: relative;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  border-top: 1px solid rgba(74, 85, 104, 0.2); /* very faint line */
+}
+
+/* Typewriter effect without blinking cursor */
+.typing-static {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  display: inline-block;
+  animation: typewriter-no-blink 2s steps(40, end) forwards;
+  border-right: none;
+}
+
+.typing-delay {
+  animation-delay: 2.1s;
+}
+
+@keyframes typewriter-no-blink {
   from { width: 0; }
   to { width: 100%; }
 }
 
-@keyframes blinkCursor {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: #2d3748; }
-}
-
-.typing {
-  overflow: hidden;
+/* Subtitle initial state */
+.subtitle-wrapper {
+  display: inline-block;
   white-space: nowrap;
-  border-right: 2px solid #2d3748;
+  overflow: hidden;
   width: 0;
-  animation: typewriter 2s steps(40, end) forwards, blinkCursor 0.75s step-end infinite;
-}
-
-.typing-done {
-  border-right: none;
-}
-
-/* Fade-in for subtitle */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Section card animation */
-.section-card {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section-card.visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation: typewriter-no-blink 2s steps(60, end) forwards;
 }
