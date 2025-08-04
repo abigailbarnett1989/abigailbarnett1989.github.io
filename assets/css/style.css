@@ -52,12 +52,14 @@ footer {
   color: #2d3748;
   font-size: 3.8rem;
   font-weight: 300;
-  margin-top: 10px !important;
-  margin-bottom: 0.05em !important;
+  margin-top: 0;           /* Shift title up */
+  margin-bottom: 0.2em;    /* Slight space below title */
   letter-spacing: -1px;
   background: none;
   -webkit-text-fill-color: currentColor;
   text-shadow: none;
+  border-bottom: none;     /* Remove line if any */
+  padding-bottom: 0;       /* Remove any padding */
 }
 
 .main-subtitle {
@@ -65,20 +67,19 @@ footer {
   color: #4a5568;
   font-size: 1.2rem;
   font-weight: 400;
-  margin-top: 0.05em !important;
-  margin-bottom: 20px !important;
+  margin-top: 0;           /* Shift subtitle up */
+  margin-bottom: 20px;     /* Space below subtitle */
   padding-top: 0;
   border-top: none;
   letter-spacing: 0.8px;
-
-  /* Typing effect setup */
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
   border-right: none;
   opacity: 1;
+  width: auto;
+  overflow: visible;
+  white-space: nowrap;
+  display: inline-block;
 }
+
 
 .portfolio-container {
   max-width: 1200px;
