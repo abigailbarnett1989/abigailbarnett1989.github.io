@@ -4,13 +4,16 @@ title: Home
 ---
 
 <div class="homepage-content">
-  <h1 class="main-title">Abigail Barnett</h1>
-  <p class="main-subtitle">Imperial College London BSc Chemistry with Management</p>
+  <!-- Animated Name Title -->
+  <h1 class="main-title typing" id="main-title">Abigail Barnett</h1>
+
+  <!-- Subtitle that fades in -->
+  <p class="main-subtitle" id="main-subtitle">Imperial College London BSc Chemistry with Management</p>
 
   <div class="portfolio-container">
 
     <!-- About Me Section -->
-    <div class="section-card" onclick="window.location.href='{{ '/about/' | relative_url }}'">
+    <div class="section-card">
       <div class="section-image about-bg"></div>
       <div class="section-overlay">
         <div class="overlay-text">
@@ -32,7 +35,7 @@ title: Home
     </div>
 
     <!-- Computational Projects Section -->
-    <div class="section-card" onclick="window.location.href='{{ '/computational-projects/' | relative_url }}'">
+    <div class="section-card">
       <div class="section-image computational-bg"></div>
       <div class="section-overlay">
         <div class="overlay-text">
@@ -54,7 +57,7 @@ title: Home
     </div>
 
     <!-- Laboratory Projects Section -->
-    <div class="section-card" onclick="window.location.href='{{ '/laboratory-projects/' | relative_url }}'">
+    <div class="section-card">
       <div class="section-image laboratory-bg"></div>
       <div class="section-overlay">
         <div class="overlay-text">
@@ -76,7 +79,7 @@ title: Home
     </div>
 
     <!-- Interests Section -->
-    <div class="section-card" onclick="window.location.href='{{ '/interests/' | relative_url }}'">
+    <div class="section-card">
       <div class="section-image interests-bg"></div>
       <div class="section-overlay">
         <div class="overlay-text">
@@ -99,3 +102,28 @@ title: Home
 
   </div>
 </div>
+
+<!-- Animation Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const title = document.getElementById("main-title");
+    const subtitle = document.getElementById("main-subtitle");
+    const cards = document.querySelectorAll(".section-card");
+
+    // Start typewriter animation
+    title.classList.add("typing");
+
+    setTimeout(() => {
+      title.classList.add("typing-done");
+      subtitle.style.animationDelay = "0s";
+      subtitle.classList.add("fade-in");
+
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add("visible");
+        }, index * 300);
+      });
+
+    }, 2100);
+  });
+</script>
