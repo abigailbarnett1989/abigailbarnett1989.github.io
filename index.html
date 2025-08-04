@@ -114,26 +114,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const sectionCards = document.querySelectorAll(".section-card");
   const portfolioContainer = document.querySelector(".portfolio-container");
 
+  // Reset widths so animations can run
   title.style.width = "0";
   subtitle.style.width = "0";
   
-  // Title animates first - shorten from 3s to 2s
+  // Remove any preset animations to restart clean
+  title.style.animation = "none";
+  subtitle.style.animation = "none";
+
+  // Animate title typing - 2s
   title.style.animation = "typewriter-no-blink 2s steps(40, end) forwards";
 
-  // Subtitle after title completes (2s)
+  // Animate subtitle typing right after title ends (at 2s)
   setTimeout(() => {
     subtitle.style.animation = "typewriter-no-blink 2s steps(60, end) forwards";
   }, 2000);
 
-  // Sections come in after subtitle completes (2s + 2s = 4s)
+  // Animate sections immediately after subtitle ends (4s)
   setTimeout(() => {
     portfolioContainer.classList.add("show");
     sectionCards.forEach((card, index) => {
       setTimeout(() => {
         card.classList.add("animate-in");
-      }, index * 100);  // reduced delay from 200ms to 100ms
+      }, index * 100);  // faster stagger (100ms)
     });
-  }, 4200);  // 2s + 2s + 0.2s buffer
+  }, 4000);
 });
 </script>
 
