@@ -108,10 +108,31 @@ title: Home
 <!-- Animation Script -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const subtitle = document.getElementById("main-subtitle");
+  const title = document.querySelector(".main-title .typing-static");
+  const subtitle = document.querySelector(".main-subtitle .subtitle-wrapper");
+  const sectionCards = document.querySelectorAll(".section-card");
 
-  // Animate subtitle after title has finished typing
-  subtitle.style.animationDelay = "2.1s";
+  // Reset widths
+  title.style.width = "0";
+  subtitle.style.width = "0";
+
+  // Start title animation
+  title.style.animation = "typewriter-no-blink 3s steps(40, end) forwards";
+
+  // Start subtitle after title
+  setTimeout(() => {
+    subtitle.style.animation = "typewriter-no-blink 3s steps(60, end) forwards";
+  }, 3200); // title duration + small buffer
+
+  // Start section animations after subtitle
+  setTimeout(() => {
+    sectionCards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add("animate-in");
+      }, index * 200);
+    });
+  }, 6800); // total delay: title + subtitle + buffer
 });
 </script>
+
 

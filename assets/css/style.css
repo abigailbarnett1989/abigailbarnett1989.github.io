@@ -1,4 +1,3 @@
-/* === CSS === */
 body {
   font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 300;
@@ -68,6 +67,9 @@ footer {
   margin-bottom: 60px;
   letter-spacing: 0.8px;
   opacity: 0.9;
+  margin-top: 0.5em;
+  padding-top: 0;
+  border-top: none;
 }
 
 .portfolio-container {
@@ -88,7 +90,15 @@ footer {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 420px; /* Fixed height to maintain consistent proportions */
+  height: 420px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-card:hover .section-overlay {
@@ -97,21 +107,21 @@ footer {
 
 .section-image {
   width: 100%;
-  height: 280px; /* Increased from 240px to achieve ~2/3 ratio */
-  background-size: 100% auto; /* Changed from cover to full width */
-  background-repeat: no-repeat; /* Added to prevent image repetition */
+  height: 280px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .section-content {
-  padding: 20px 30px; /* Reduced vertical padding from 30px to 20px */
+  padding: 20px 30px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Changed to space-between for equal spacing */
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   position: relative;
-  height: 140px; /* Fixed height for content area (420px - 280px = 140px) */
+  height: 140px;
 }
 
 .section-overlay {
@@ -167,7 +177,7 @@ footer {
   font-size: 22px;
   font-weight: 600;
   color: #000;
-  margin: 0; /* Removed margin to let flex spacing handle it */
+  margin: 0;
   background: none;
   -webkit-text-fill-color: currentColor;
   letter-spacing: 0.3px;
@@ -194,7 +204,7 @@ footer {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin: 0; /* Removed margin to let flex spacing handle it */
+  margin: 0;
 }
 
 .skill-tag {
@@ -215,19 +225,19 @@ footer {
 
 .about-bg {
   background-image: url('/assets/images/about-me.jpg');
-  background-position: 50% 12%; /* Custom Y position at 12% */
+  background-position: 50% 12%;
 }
 .computational-bg {
   background-image: url('/assets/images/computational-projects.jpg');
-  background-position: center; /* Keeping center as you didn't specify a change */
+  background-position: center;
 }
 .laboratory-bg {
   background-image: url('/assets/images/laboratory-projects.jpg');
-  background-position: 50% 23%; /* Custom Y position at 23% */
+  background-position: 50% 23%;
 }
 .interests-bg {
   background-image: url('/assets/images/interests.jpg');
-  background-position: 50% 18%; /* Custom Y position at 18% */
+  background-position: 50% 18%;
 }
 
 main h1, main h2, main h3 {
@@ -278,54 +288,39 @@ main {
     gap: 25px;
   }
   .section-card {
-    height: 380px; /* Slightly smaller on mobile */
+    height: 380px;
   }
   .section-image {
-    height: 250px; /* Proportionally smaller on mobile */
+    height: 250px;
   }
   .section-content {
     padding: 15px 25px;
-    height: 130px; /* Adjusted for mobile */
+    height: 130px;
   }
   .homepage-content {
     padding: 15px 1em 2em 1em;
   }
 }
 
-/* === Refined Typing Animation === */
-
-/* Basic line that always appears under title */
-.main-subtitle {
-  position: relative;
-  margin-top: 0.5em;
-  padding-top: 0.5em;
-  border-top: 1px solid rgba(74, 85, 104, 0.2); /* very faint line */
-}
-
-/* Typewriter effect without blinking cursor */
+/* === Typing Animation === */
 .typing-static {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
   display: inline-block;
-  animation: typewriter-no-blink 2s steps(40, end) forwards;
+  animation: typewriter-no-blink 3s steps(40, end) forwards;
   border-right: none;
 }
 
-.typing-delay {
-  animation-delay: 2.1s;
-}
-
-@keyframes typewriter-no-blink {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* Subtitle initial state */
 .subtitle-wrapper {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  animation: typewriter-no-blink 2s steps(60, end) forwards;
+  animation: typewriter-no-blink 3s steps(60, end) forwards;
+}
+
+@keyframes typewriter-no-blink {
+  from { width: 0; }
+  to { width: 100%; }
 }
