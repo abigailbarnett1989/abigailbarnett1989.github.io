@@ -1,3 +1,4 @@
+/* === CSS === */
 body {
   font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 300;
@@ -52,7 +53,7 @@ footer {
   color: #2d3748;
   font-size: 3.8rem;
   font-weight: 300;
-  margin: 0 0 15px 0;
+  margin-bottom: 0;
   letter-spacing: -1px;
   background: none;
   -webkit-text-fill-color: currentColor;
@@ -64,12 +65,12 @@ footer {
   color: #4a5568;
   font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 60px;
-  letter-spacing: 0.8px;
-  opacity: 0.9;
-  margin-top: 0.5em;
+  margin-top: 0.3em;
+  margin-bottom: 30px;
   padding-top: 0;
   border-top: none;
+  letter-spacing: 0.8px;
+  opacity: 0.9;
 }
 
 .portfolio-container {
@@ -78,6 +79,12 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 35px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.portfolio-container.show {
+  opacity: 1;
 }
 
 .section-card {
@@ -302,7 +309,6 @@ main {
   }
 }
 
-/* === Typing Animation === */
 .typing-static {
   overflow: hidden;
   white-space: nowrap;
