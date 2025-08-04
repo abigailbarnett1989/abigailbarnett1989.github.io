@@ -117,23 +117,23 @@ document.addEventListener("DOMContentLoaded", function () {
   title.style.width = "0";
   subtitle.style.width = "0";
   
-  // Title animates first
-  title.style.animation = "typewriter-no-blink 3s steps(40, end) forwards";
+  // Title animates first - shorten from 3s to 2s
+  title.style.animation = "typewriter-no-blink 2s steps(40, end) forwards";
 
-  // Subtitle after title completes
+  // Subtitle after title completes (2s)
   setTimeout(() => {
-    subtitle.style.animation = "typewriter-no-blink 3s steps(60, end) forwards";
-  }, 3000);
+    subtitle.style.animation = "typewriter-no-blink 2s steps(60, end) forwards";
+  }, 2000);
 
-  // Sections come in after subtitle completes
+  // Sections come in after subtitle completes (2s + 2s = 4s)
   setTimeout(() => {
     portfolioContainer.classList.add("show");
     sectionCards.forEach((card, index) => {
       setTimeout(() => {
         card.classList.add("animate-in");
-      }, index * 200);
+      }, index * 100);  // reduced delay from 200ms to 100ms
     });
-  }, 6200);
+  }, 4200);  // 2s + 2s + 0.2s buffer
 });
 </script>
 
