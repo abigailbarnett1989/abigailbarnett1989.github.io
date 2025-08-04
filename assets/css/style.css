@@ -53,7 +53,7 @@ footer {
   font-size: 3.8rem;
   font-weight: 300;
   margin-top: 0;           /* Shift title up */
-  margin-bottom: 0.2em;    /* Slight space below title */
+  margin-bottom: 0.1em;    /* Slight space below title */
   letter-spacing: -1px;
   background: none;
   -webkit-text-fill-color: currentColor;
@@ -68,7 +68,7 @@ footer {
   font-size: 1.2rem;
   font-weight: 400;
   margin-top: 0;           /* Shift subtitle up */
-  margin-bottom: 20px;     /* Space below subtitle */
+  margin-bottom: 10px;     /* Space below subtitle */
   padding-top: 0;
   border-top: none;
   letter-spacing: 0.8px;
@@ -77,7 +77,7 @@ footer {
   width: auto;
   overflow: visible;
   white-space: nowrap;
-  display: inline-block;
+  display: block;
 }
 
 
